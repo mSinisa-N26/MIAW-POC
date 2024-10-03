@@ -8,18 +8,19 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon"> -->
   </head>
  <body> 
+
 <script type='text/javascript'>
 	window.addEventListener("onEmbeddedMessagingReady", e => {
         console.log("onEmbeddedMessagingReady event triggered");
-        embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
-            "language" : "ES",
-            "userId" : "1234567890ABCDEFG"
-        });
+        //embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+        //    "language" : "ES",
+        //    "userId" : "1234567890ABCDEFG"
+        //});
 	console.log("hidden fields set");
-    });
 	function initEmbeddedMessaging() {
 		try {
-			embeddedservice_bootstrap.settings.language = 'en_US';
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
 			embeddedservice_bootstrap.init(
 				'00D9O000007kCYP',
 				'GitHub_Messaging_POC',
@@ -34,7 +35,5 @@
 	};
 </script>
 <script type='text/javascript' src='https://n26--chatpoc.sandbox.my.site.com/ESWGitHubMessagingPOC1727961737610/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
-
   </body>
 </html>
