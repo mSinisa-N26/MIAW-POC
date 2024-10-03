@@ -9,14 +9,21 @@
   </head>
  <body> 
 <script type='text/javascript'>
+	window.addEventListener("onEmbeddedMessagingReady", e => {
+        console.log("onEmbeddedMessagingReady event triggered");
+        embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+            "language" : "ES",
+            "userId" : "1234567890ABCDEFG"
+        });
+	console.log("hidden fields set");
+    });
 	function initEmbeddedMessaging() {
 		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-
+			embeddedservice_bootstrap.settings.language = 'en_US';
 			embeddedservice_bootstrap.init(
 				'00D9O000007kCYP',
-				'WebFLowMessaging',
-				'https://n26--chatpoc.sandbox.my.site.com/ESWWebFLowMessaging1727885802818',
+				'GitHub_Messaging_POC',
+				'https://n26--chatpoc.sandbox.my.site.com/ESWGitHubMessagingPOC1727961737610',
 				{
 					scrt2URL: 'https://n26--chatpoc.sandbox.my.salesforce-scrt.com'
 				}
@@ -26,7 +33,8 @@
 		}
 	};
 </script>
-<script type='text/javascript' src='https://n26--chatpoc.sandbox.my.site.com/ESWWebFLowMessaging1727885802818/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+<script type='text/javascript' src='https://n26--chatpoc.sandbox.my.site.com/ESWGitHubMessagingPOC1727961737610/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
 
   </body>
 </html>
