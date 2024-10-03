@@ -16,6 +16,7 @@
         //    "language" : "ES",
         //    "userId" : "1234567890ABCDEFG"
         //});
+	};
 	console.log("hidden fields set");
 	function initEmbeddedMessaging() {
 		try {
