@@ -21,7 +21,7 @@
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'es'; // For example, enter 'en' or 'en-US'
-
+console.log("ES");
 			embeddedservice_bootstrap.init(
 				'00D9O000007kCYP',
 				'GitHub_Messaging_POC',
